@@ -15,9 +15,9 @@ after_success:
   - docker build -t arjendevries/multi-server ./server
   - docker build -t arjendevries/multi-worker ./worker
 # Log in to the docker CLI
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 # take those images and push to Docker Hub
-- docker push arjendevries/multi-client
-- docker push arjendevries/multi-nginx
-- docker push arjendevries/multi-server
-- docker push arjendevries/multi-worker
+  - docker push arjendevries/multi-client
+  - docker push arjendevries/multi-nginx
+  - docker push arjendevries/multi-server
+  - docker push arjendevries/multi-worker
